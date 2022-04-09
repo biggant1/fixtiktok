@@ -15,6 +15,7 @@ app.get("/", (req, res) => {
 app.get("/:user/video/:videoid", async (req, res) => {
   let tiktokURL = `https://www.tiktok.com/${req.params.user}/video/${req.params.videoid}`;
   let videoURL = await tiktok.getVideoURL(tiktokURL);
+  console.log(videoURL);
   res.render("main", {
     video_url: videoURL,
     user: req.params.user,
