@@ -15,7 +15,11 @@ app.get("/", (req, res) => {
 app.get("/:user/video/:videoid", async (req, res) => {
   let tiktokURL = `https://www.tiktok.com/${req.params.user}/video/${req.params.videoid}`;
   let videoURL = await tiktok.getVideoURL(tiktokURL);
-  res.render("main", { video_url: videoURL, user: req.params.user });
+  res.render("main", {
+    video_url: videoURL,
+    user: req.params.user,
+    original_url: tiktokURL,
+  });
 });
 
 app.listen(port, () => console.log(`Running at http://localhost:${port}`));
