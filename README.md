@@ -10,3 +10,5 @@ Fixes tiktok embeds for discord
     - fxtiktok.herokuapp
     - eg https://fxtiktok.herokuapp.com/@tiktok/video/6807491984882765062
   - embed in discord like normal
+
+![example](example.gif)
